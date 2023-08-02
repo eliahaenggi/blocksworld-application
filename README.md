@@ -7,4 +7,4 @@ Furthermore, configuration settings in the game are elaborated.
 
 The source code can be obtained using the following link:
 
-https://www.dropbox.com/sh/s9y2vx8smt2729l/AABWjT0Y3F9srNjMY6o5winLa?dl=0
+https://drive.google.com/drive/folders/15fgu0nFSbgWc3Oshtp7FMUkBfXoBcigY?usp=sharing
