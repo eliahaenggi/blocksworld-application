@@ -27,8 +27,18 @@ For other distributions the command is a bit different. The path where the graph
 
 Fast Downward can be downloaded on the dedicated GitHub page (https://github.com/aibasel/downward). Additionally, some adjustments have to be done in order to use Fast Downward in the application. 
 The application uses a self defined Blocksworld heuristic. This heuristic has to be added to the Fast Downward code.
-It is not guaranteed that the changes for the planner work after the 02.08.2023. The adjustments for the planner can also be downloaded with the source code of the application. They are contained in the DownwardAdditions folder. The source and header file of the blocks heuristic have to be added to the heuristic folder in the search directory of Fast Downward.
-Additionally, the cmake DownwardFiles file in the search directory has to be overwritten with the DownwardFiles file downloaded from (https://drive.google.com/drive/folders/15fgu0nFSbgWc3Oshtp7FMUkBfXoBcigY?usp=sharing). After these changes, the blocks heuristic can be used in the planner.
+The adjustments for the planner can also be downloaded with the source code of the application. They are contained in the DownwardAdditions folder. The source and header file of the blocks heuristic have to be added to the heuristic folder in the search directory of Fast Downward.
+Additionally, the cmake DownwardFiles file in the search directory has to be appended with the definition of the Blocksworld plugin. Therefore, the following lines have to be added in the DownwardFiles file:
+
+fast_downward_plugin(  
+NAME BLOCKS_HEURISTIC  
+HELP "The 'blocks' heuristic"  
+SOURCES  
+heuristics/blocks_heuristic  
+DEPENDS TASK_PROPERTIES  
+) 
+
+After these changes, the blocks heuristic can be used in the planner.  
 To use the Fast Downward planner in the application, the configuration file must be adjusted in the application. The configuration file consists of a path to the Python interpreter and a path to the fastdownward.py file.
 
 The application provides a system where states can be saved. The purpose is that states with different difficulties can be generated and used for different target groups. Either these states are generated in the application by applying actions. Otherwise, the SavedStates file can be altered to generate new initial states. The format used in the file is as follows:
