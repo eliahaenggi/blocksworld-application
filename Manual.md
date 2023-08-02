@@ -10,6 +10,7 @@ The content file contains Blueprints, meshes, textures and other Unreal Engine f
 
 The source code can be downloaded here:
 
+https://www.dropbox.com/sh/3ru5xi337gjxfnk/AACRcldaCFnFsr20Wn1OO3HTa?dl=0
 
 The code was generated with the engine version 5.1.1. To use the application in the Unreal editor, a new project must be created with the engine.
 From there config, content and source files can be copied and pasted in the newly created project. In some cases, for the editor to work the UProject file containing the project ID is necessary. This file is also contained in the source code.
@@ -27,7 +28,7 @@ To use the Fast Downward planner in the application, the configuration file must
 
 The application provides a system where states can be saved. The purpose is that states with different difficulties can be generated and used for different target groups. Either these states are generated in the application by applying actions. Instead, the SavedStates file can be altered to generate new initial states. The format of this file is defined as follows:
 
-NAME_OF_THE_STATE: CONTAINERID_LANDSTACK1 CONTAINERID_LANDSTACK1;CONTAINERID_SHIPSTACK1 CONTAINERID_SHIPSTACK1,CONTAINERID_SHIPSTACK2 CONTAINERID_SHIPSTACK2,CONTAINERID_SHIPSTACK3 CONTAINERID_SHIPSTACK3;CONTAINERID_ATTACHEDCONTAINER
+NAME_OF_STATE: ID_LANDSTACK1 ID_LANDSTACK1;ID_SHIPSTACK1 ID_SHIPSTACK1,ID_SHIPSTACK2 ID_SHIPSTACK2,ID_SHIPSTACK3 ID_SHIPSTACK3;ID_ATTACHEDCONTAINER
 
 An example instance of a saved state would be:
 
