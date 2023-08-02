@@ -25,7 +25,11 @@ sudo apt install graphviz
 
 For other distributions the command is a bit different. The path where the graphviz library must be located is specified in the Block.build.cs file in the source folder. This location can also be changed or made customizable.
 
-To use the Fast Downward planner in the application, the configuration file must be adjusted in the application. The configuration file consists of a path to the Python interpreter and a path to the fastdownward.py file. Fast Downward can be downloaded on the dedicated GitHub page (https://github.com/aibasel/downward). If these information are not specified in the configuration, the planner cannot be run.
+To use the Fast Downward planner in the application, the configuration file must be adjusted in the application. The configuration file consists of a path to the Python interpreter and a path to the fastdownward.py file. 
+Fast Downward can be downloaded on the dedicated GitHub page (https://github.com/aibasel/downward). Additionally, some adjustments have to be done in order to use Fast Downward in the application. 
+The application uses a self defined Blocksworld heuristic. This heuristic has to be added to the Fast Downward code.
+It is not guaranteed that the changes for the planner work after the 02.08.2023. The adjustments for the planner can also be downloaded with the source code of the application. The source and header file of the blocks heuristic have to be added to the heuristic folder in the search directory.
+Additionally, the cmake DownwardFiles file in the search directory has to be overwritten with the DownwardFiles file downloaded from (https://www.dropbox.com/sh/s9y2vx8smt2729l/AABWjT0Y3F9srNjMY6o5winLa?dl=0). After these changes, the blocks heuristic can be used in the planner.
 
 The application provides a system where states can be saved. The purpose is that states with different difficulties can be generated and used for different target groups. Either these states are generated in the application by applying actions. Otherwise, the SavedStates file can be altered to generate new initial states. The format used in the file is as follows:
 
