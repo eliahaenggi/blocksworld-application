@@ -17,13 +17,13 @@ The code was generated using the Unreal Engine version 5.1.1. It is not recommen
 From there config, content and source files can be copied and pasted in the newly created project. In some cases, for the editor to work the UProject file containing the project ID is necessary. This file is also contained in the source code.
 
 The application can be extended by adding user interface functionality. This is mostly done in Blueprints in the content folder. Other implementations are written in C++ in the content folder.
-The application can be packaged in the editor.
+The application can be packaged in the editor. For this, the shipping option has to be chosen.
 
 The application uses a third-party library: the graph visualization tool graphviz. This tool has to be linked. The graphviz library can be obtained by the following command on Ubuntu/Debian distributions:
 
 sudo apt install graphviz
 
-For other distributions the command is a bit different. The path where the graphviz library must be located is specified in the Block.build.cs file in the source folder. This location can also be changed or made customizable.
+For other distributions the command is a bit different. The path where the graphviz library must be located is specified in the Blocks.build.cs file in the source folder. This location can also be changed or made customizable.
 
 To use the Fast Downward planner in the application, the configuration file must be adjusted in the application. The configuration file consists of a path to the Python interpreter and a path to the fastdownward.py file. 
 Fast Downward can be downloaded on the dedicated GitHub page (https://github.com/aibasel/downward). Additionally, some adjustments have to be done in order to use Fast Downward in the application. 
