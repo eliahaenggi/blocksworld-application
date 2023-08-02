@@ -4,3 +4,7 @@ This repository contains the bachelor thesis of Elia Hänggi (elia.haenggi@stud.
 
 The manual.md file describes all steps necessary to obtain the source code the Interactive Blocksworld application. Additionally it is shown how the application can be used in the Unreal Engine editor.
 Furthermore, configuration settings in the game are elaborated.
+
+The source code can be obtained using the following link:
+
+https://www.dropbox.com/sh/s9y2vx8smt2729l/AABWjT0Y3F9srNjMY6o5winLa?dl=0
